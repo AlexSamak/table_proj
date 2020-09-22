@@ -1,0 +1,19 @@
+{# /templates/table.html #}
+{% load render_table from django_tables2 %}
+{% load static %}
+
+<!doctype html>
+<html>
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="{% static '/css/default.css' %}">
+        <title>Table</title>
+
+    </head>
+    <body>
+
+    <h1>Таблица как объект</h1>
+
+    {% render_table query_results %}
+    </body>
+</html>
