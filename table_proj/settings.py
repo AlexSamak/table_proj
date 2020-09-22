@@ -163,6 +163,10 @@ if DEBUG:
 
 CELERY_BROKER_URL = 'amqp://admin:1234@localhost:5672'
 
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_RESULT_BACKEND = 'db+sqlite:///results.sqlite'
+CELERY_TASK_SERIALIZER = 'json'
+
 CELERY_BEAT_SCHEDULE = {
     'second-task': {
         'task': 'specification.tasks.my_second_task',

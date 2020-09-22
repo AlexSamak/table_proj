@@ -1,4 +1,5 @@
 # specification.tasks.py
+# celery -A table_proj worker -B -l info
 from celery import shared_task
 from celery.task import periodic_task
 from celery.schedules import crontab
@@ -21,6 +22,7 @@ def my_third_task():
 
 @shared_task
 def mul(x, y):
+    print('--------------  MUL ------------------')
     return x * y
 
 
