@@ -175,5 +175,10 @@ CELERY_BEAT_SCHEDULE = {
     'third-task': {
         'task': 'specification.tasks.my_third_task',
         'schedule': 20,
+    },
+    'mul-task': {
+        'task': 'specification.tasks.mul',
+        'schedule': 20,
+        'args': (6, 8)
     }
 }
