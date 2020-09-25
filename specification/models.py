@@ -51,7 +51,7 @@ class AutoPart(models.Model):
     price = MoneyField(max_digits=19, decimal_places=2, default_currency='RUB')
 
     def __str__(self):
-        return self.name
+        return f'{self.name}'
 
 class Specification(models.Model):
     """Спецификация техобслуживания"""

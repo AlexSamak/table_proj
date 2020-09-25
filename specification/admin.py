@@ -4,7 +4,7 @@ from .models import Specification, SpecificationTable, AutoPart, Car, FuelType, 
 
 admin.site.register(Specification)
 admin.site.register(SpecificationTable)
-admin.site.register(AutoPart)
+#admin.site.register(AutoPart)
 admin.site.register(Car)
 # admin.site.register(FuelType)
 # admin.site.register(FuelNorm)
@@ -18,3 +18,8 @@ class FuelTypeAdmin(admin.ModelAdmin):
 @admin.register(FuelNorm)
 class FuelNormAdmin(admin.ModelAdmin):
     list_display = ('fuelType', 'fuelTypeB', 'fuelTypeC', 'quantity', 'unit')
+
+@admin.register(AutoPart)
+class AutoPartAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price')
+    list_filter = ('price',)
